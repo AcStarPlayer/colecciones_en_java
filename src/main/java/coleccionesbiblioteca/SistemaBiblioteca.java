@@ -3,11 +3,14 @@ package coleccionesbiblioteca;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SistemaBiblioteca {
 
     private Map<String, Material> catalogo = new HashMap<>();
     private Map<String, ArrayList<String>> listaEspera = new HashMap<>();
+    private Set<String> miembros = new HashSet<>();
 
     public void registrarMaterial(Material material) {
 
@@ -70,4 +73,17 @@ public class SistemaBiblioteca {
 
     }
 
+    public boolean registrarMiembro(String usuario) {
+
+        return miembros.add(usuario);
+
+    }
+
+    public boolean tieneMembresia(String usuario) {
+
+        return miembros.contains(usuario);
+
+    }
+
 }
+

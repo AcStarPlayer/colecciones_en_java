@@ -116,6 +116,35 @@ public class Main {
         System.out.println( "Siguiente usuario: " + siguiente2);
 
 
+        boolean miembro1 = sistema.registrarMiembro("Brayan");
+
+        System.out.println( "\nBrayan registrado: " + miembro1);
+
+        boolean miembro2 = sistema.registrarMiembro("Emily");
+
+        System.out.println( "Emily registrada: " + miembro2);
+
+        boolean miembro3 = sistema.registrarMiembro("Brayan");
+
+        System.out.println( "Brayan registrado otra vez: " + miembro3);
+
+
+        System.out.println( "\n¿Brayan tiene membresía? " + sistema.tieneMembresia("Brayan"));
+
+        System.out.println( "¿Carlos tiene membresía? " + sistema.tieneMembresia("Carlos"));
+
+        Material inexistente = sistema.buscarMaterial("LIB999");
+
+        if (inexistente != null) {
+
+            inexistente.mostrarInfo();
+
+        } else {
+
+            System.out.println( "\nLIB999 no existe en el catálogo");
+
+        }
+
         Material encontrado = sistema.buscarMaterial("LIB001");
 
 
